@@ -1,10 +1,6 @@
 package com.wjc.studygooglesamples.tasks;
 
 /**
- * Created by Administrator on 2017/12/2.
- */
-
-/**
  * Used with the filter spinner in the tasks list.
  */
 public enum TasksFilterType {

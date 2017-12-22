@@ -12,17 +12,17 @@ import java.util.List;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-public class TasksPresenter implements TasksContract.Presenter {
+public class TaskPresenter implements TaskContract.Presenter {
 
     private final TasksRepository mTasksRepository;
 
-    private final TasksContract.View mTasksView;
+    private final TaskContract.View mTasksView;
 
     private TasksFilterType mCurrentFiltering = TasksFilterType.ALL_TASKS;
 
     private boolean mFirstLoad = true;
 
-    public TasksPresenter(@NonNull TasksRepository mTasksRepository, @NonNull TasksContract.View mTasksView) {
+    public TaskPresenter(@NonNull TasksRepository mTasksRepository, @NonNull TaskContract.View mTasksView) {
         this.mTasksRepository = checkNotNull(mTasksRepository, "tasksRepository cannot be null");
         this.mTasksView = checkNotNull(mTasksView, "tasksView cannot be null!");
 

@@ -12,7 +12,7 @@ import java.util.List;
  * 契约类：指定了View和Presenter之间的契约。
  * View和Presenter暴露的方法，都放在这里。
  */
-public interface TasksContract {
+public interface TaskContract {
 
     interface View extends BaseView<Presenter> {
 
