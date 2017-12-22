@@ -24,7 +24,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.wjc.studygooglesamples.R;
+import com.wjc.studygooglesamples.addedittask.AddEditTaskActivity;
 import com.wjc.studygooglesamples.data.Task;
+import com.wjc.studygooglesamples.taskdetail.TaskDetailActivity;
 
 
 import java.util.ArrayList;
@@ -288,13 +290,11 @@ public class TasksFragment extends Fragment implements TasksContract.View {
         mFilteringLabelView.setText(getResources().getString(R.string.label_all));
     }
 
-    /**
-     * 暂时未完成
-     */
+
     @Override
     public void showAddTask() {
-//        Intent intent = new Intent(getContext(), AddEditTaskActivity.class);
-//        startActivityForResult(intent, AddEditTaskActivity.REQUEST_ADD_TASK);
+        Intent intent = new Intent(getContext(), AddEditTaskActivity.class);
+        startActivityForResult(intent, AddEditTaskActivity.REQUEST_ADD_TASK);
     }
 
     /**
@@ -306,9 +306,9 @@ public class TasksFragment extends Fragment implements TasksContract.View {
         // in it's own Activity, since it makes more sense that way and it gives us the flexibility
         // to show some Intent stubbing.
 
-//        Intent intent = new Intent(getContext(), TaskDetailActivity.class);
-//        intent.putExtra(TaskDetailActivity.EXTRA_TASK_ID, taskId);
-//        startActivity(intent);
+        Intent intent = new Intent(getContext(), TaskDetailActivity.class);
+        intent.putExtra(TaskDetailActivity.EXTRA_TASK_ID, taskId);
+        startActivity(intent);
     }
 
     @Override
